@@ -24,8 +24,10 @@ enter the build folder on command line
 
 type: 
 cmake ..
+then:
+make
 
-This will populate the build directory with an executable called "practice"
+This will populate the build directory with an executable called "practice" if all goes well.
 
 run ./practice, if a window pops up with a red rectangle, that then turns green and grows, then everything is set up properly! 
 
@@ -34,7 +36,7 @@ I've included a sample file called "basicVulkan.cpp"
 It is a working example of how to include the "basicRender" class, which contains the entire implementation. As well as examples of how to put shapes into the vertex buffer, and how to use run-time vertex buffer updating. 
 Start there. 
 
-Once you understand what it does, open up BasicRender.hpp, and start hacking! 
+Once you understand what it does, simply include basic render in any application that generates verticies, and you can have well-behaved real-time rendering in anything you want! 
 
 
 ## future changes:
