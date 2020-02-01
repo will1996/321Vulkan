@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.7.0 FATAL_ERROR)
 project(practice VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 17) 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 include(CTest)
 enable_testing()
@@ -13,6 +20,7 @@ add_library(basicRenderer basicRender.cpp basicRender.hpp)
 add_subdirectory(glfw-3.3)
 find_package(glfw3 3.3 CONFIG REQUIRED)
 
+
 target_link_libraries(sample glfw)
 target_link_libraries(basicRenderer glfw)
 
@@ -22,6 +30,8 @@ target_link_libraries(sample Vulkan::Vulkan)
 
 
 target_include_directories(basicRenderer PRIVATE Vulkan::Vulkan)
+target_include_directories(basicRenderer PRIVATE stb)
+target_include_directories(basicRenderer PRIVATE tinyobjloader)
 target_link_libraries(basicRenderer Vulkan::Vulkan)
 
 target_link_libraries(practice PRIVATE basicRenderer)
