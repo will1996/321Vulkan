@@ -717,8 +717,7 @@ void BasicRenderer::createLogicalDevice(){
         }
     }
 
-    SwapChainSupportDetails BasicRenderer::querySwapChainSupport(VkPhysicalDevice device) {
-        SwapChainSupportDetails details;
+    SwapChainSupportDetails BasicRenderer::querySwapChainSupport(VkPhysicalDevice device) { SwapChainSupportDetails details;
 
         vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, d_surface, &details.capabilities);
 
