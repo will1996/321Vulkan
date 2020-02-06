@@ -1,4 +1,6 @@
-##321 Vulkan
+321 Vulkan
+==========
+
 This is a learning project for graphics programming, it is also a complete version of "The Vulkan Tutorial" (https://vulkan-tutorial.com) and as such 
 has many code similarities to that project. 
 
